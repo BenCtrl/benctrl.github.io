@@ -56,3 +56,13 @@ body {
   color: #edfffe;
   text-shadow: 10px 10px black, 0px 0px 108px #F2FFFF, 0px 0px 127px #49fff6;
 }
+
+@media (max-width: 1250px) {
+  #page-header {
+    font-size: 1rem;
+  }
+
+  #project-links {
+    font-size: 2rem;
+  }
+}
