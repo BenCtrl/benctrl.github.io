@@ -64,5 +64,6 @@ body {
 
   #project-links {
     font-size: 2rem;
+    justify-content: space-around;
   }
 }
