@@ -34,6 +34,11 @@ body {
   filter: blur(0.08rem) drop-shadow( 0 0 2rem #ffac3f);
   color: #ff9939;
   z-index: -100;
+
+  -webkit-animation-name: blink;
+  -webkit-animation-duration: 1500ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-filter: blur(0.08rem) drop-shadow( 0 0 2rem #ffac3f);
 }
 
 body::after {
@@ -85,6 +90,12 @@ body::after {
 }
 
 @keyframes blink {
+  0%   { opacity:0; }
+  25%  { opacity:0.6; }
+  100% { opacity:0; }
+}
+
+@-webkit-keyframes blink {
   0%   { opacity:0; }
   25%  { opacity:0.6; }
   100% { opacity:0; }
