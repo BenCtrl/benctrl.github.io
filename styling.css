@@ -23,11 +23,11 @@ body {
   overflow: hidden;
 }
 
-.globe-icon {
+span.material-symbols-outlined.globe-icon {
   animation-name: blink;
   animation-duration: 1500ms;
   animation-iteration-count: infinite;
-  font-size: 40rem !important;
+  font-size: 40rem;
   top: 12rem;
   left: 20rem;
   position: absolute;
@@ -86,6 +86,13 @@ body::after {
   #project-links {
     font-size: 2rem;
     justify-content: space-around;
+  }
+
+  span.material-symbols-outlined.globe-icon {
+    display: flex;
+    justify-content: center;
+    position: unset;
+    font-size: 16rem;
   }
 }
 
