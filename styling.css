@@ -85,7 +85,8 @@ body::after {
 
   #project-links {
     font-size: 2rem;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
   }
 
   span.material-symbols-outlined.globe-icon {
@@ -93,6 +94,7 @@ body::after {
     justify-content: center;
     position: unset;
     font-size: 16rem;
+    margin-top: 4rem;
   }
 }
 
