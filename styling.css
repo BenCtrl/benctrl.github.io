@@ -91,6 +91,14 @@ body {
   justify-content: center;
 }
 
+#project-links .project-link:first-child {
+  margin-left: 0;
+}
+
+#project-links .project-link:last-child {
+  margin-right: 0;
+}
+
 #project-links .project-link:hover {
   color: var(--accent-colour-blue);
   border-color: var(--accent-colour-blue);
