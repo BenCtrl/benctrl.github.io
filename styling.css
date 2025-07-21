@@ -6,106 +6,123 @@
 :root {
   font-family: "Square", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
-  background-color: #000000;
-  color: #979797;
+  --background-colour-base: #ebebeb;
+  --background-coloir-accent: #d7d7d7;
+  --accent-colour-blue: #4a7aff;
+  --font-color: #3d3d3d;
+
+  background-color: var(--background-colour-base);
+  color: var(--font-color);
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+html {
+  height: 100vh;
+}
+
+html, body {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+}
+
+body {
   margin: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
 }
 
-span.material-symbols-outlined.globe-icon {
-  animation-name: blink;
-  animation-duration: 1500ms;
-  animation-iteration-count: infinite;
-  font-size: 40rem;
-  top: 12rem;
-  left: 20rem;
-  position: absolute;
-  filter: blur(0.08rem) drop-shadow( 0 0 2rem #ffac3f);
-  color: #ff9939;
-  z-index: -100;
-
-  -webkit-animation-name: blink;
-  -webkit-animation-duration: 1500ms;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-filter: blur(0.08rem) drop-shadow( 0 0 2rem #ffac3f);
+#portfolio-header {
+  background-color: var(--accent-colour-blue);
+  color: var(--background-colour-base);
+  display: flex;
+  justify-content: center;
 }
 
-body::after {
-  content: '';
-  background-image: url('./assets/images/noise.png');
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: -99;
-  opacity: 0.05;
+#portfolio-title {
+  margin: 100px;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-style: italic;
+  border: 10px solid var(--background-colour-base);
+  padding: 0 13px 0 0;
+  user-select: none;
+}
+
+.content-section {
+  margin: 0 300px;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--background-coloir-accent);
+}
+
+.content-section:last-child {
+  border: none;
+}
+
+.content-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-me {
+  font-family: "Euro Technic", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  margin: 2rem 0;
 }
 
 #project-links {
-  font-size: 4rem;
-  padding: 2rem 4rem;
-  letter-spacing: 0.5rem;
   display: flex;
-  justify-content: flex-end;
-  flex-grow: 1;
-  flex-direction: column;
-  align-items: end;
+  justify-content: space-between;
 }
 
 #project-links .project-link {
-  transition: 0.4s ease-out;
-  cursor: pointer;
+  transition: 0.1s;
   color: inherit;
   text-decoration: none;
-  text-shadow: 10px 10px black;
-  margin: 2rem 0;
-
-  font-family: 'Square';
+  margin: 0.5rem;
+  padding: 1rem;
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  border: 2px solid var(--background-coloir-accent);
+  border-radius: 10px;
+  font-size: 1.5rem;
+  justify-content: center;
 }
 
 #project-links .project-link:hover {
-  color: #edfffe;
-  text-shadow: 10px 10px black, 0px 0px 108px #F2FFFF, 0px 0px 127px #49fff6;
+  color: var(--accent-colour-blue);
+  border-color: var(--accent-colour-blue);
+}
+
+footer {
+  display: flex;
+  align-self: center;
+  color: var(--background-coloir-accent);
+  margin: 1rem 0;
 }
 
 @media (max-width: 1250px) {
-  #page-header {
-    font-size: 1rem;
+  #portfolio-title {
+    margin: 60px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-style: italic;
+    border-width: 6px;
+    padding: 0 13px 0 0;
+  }
+
+  .content-section {
+    margin: 20px;
   }
 
   #project-links {
     font-size: 2rem;
-    justify-content: center;
-    align-items: center;
+    display: block;
   }
 
-  span.material-symbols-outlined.globe-icon {
-    display: flex;
-    justify-content: center;
-    position: unset;
-    font-size: 16rem;
-    margin-top: 4rem;
+  #project-links .project-link {
+    margin: 1rem 0;
   }
-}
-
-@keyframes blink {
-  0%   { opacity:0; }
-  25%  { opacity:0.6; }
-  100% { opacity:0; }
-}
-
-@-webkit-keyframes blink {
-  0%   { opacity:0; }
-  25%  { opacity:0.6; }
-  100% { opacity:0; }
 }
