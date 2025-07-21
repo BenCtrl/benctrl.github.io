@@ -7,7 +7,7 @@
   font-family: "Square", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   --background-colour-base: #ebebeb;
-  --background-coloir-accent: #d7d7d7;
+  --background-colour-accent: #d7d7d7;
   --accent-colour-blue: #4a7aff;
   --font-color: #3d3d3d;
 
@@ -53,7 +53,7 @@ body {
 .content-section {
   margin: 0 300px;
   padding: 20px 0;
-  border-bottom: 2px solid var(--background-coloir-accent);
+  border-bottom: 2px solid var(--background-colour-accent);
 }
 
 .content-section:last-child {
@@ -67,8 +67,13 @@ body {
 
 .about-me {
   font-family: "Euro Technic", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  text-align: center;
   margin: 2rem 0;
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--background-colour-accent);
+}
+
+.about-me-welcome {
+  font-family: 'Square';
 }
 
 #project-links {
@@ -85,10 +90,23 @@ body {
   flex-grow: 1;
   position: relative;
   display: flex;
-  border: 2px solid var(--background-coloir-accent);
+  border: 2px solid var(--background-colour-accent);
   border-radius: 10px;
   font-size: 1.5rem;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+#project-links .project-link .icon {
+  font-size: 0;
+  transition: 0.2s;
+  margin-top: 0;
+}
+
+#project-links .project-link:hover .icon {
+  font-size: 2rem;
+  margin-top: 0.2rem;
 }
 
 #project-links .project-link:first-child {
@@ -102,12 +120,13 @@ body {
 #project-links .project-link:hover {
   color: var(--accent-colour-blue);
   border-color: var(--accent-colour-blue);
+  box-shadow: 0.2rem 0.2rem 0.625rem #444444;
 }
 
 footer {
   display: flex;
   align-self: center;
-  color: var(--background-coloir-accent);
+  color: var(--background-colour-accent);
   margin: 1rem 0;
 }
 
